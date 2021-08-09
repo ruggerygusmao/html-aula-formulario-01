@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+
+    <style>
+        fieldset{
+            width: 35%;
+            font-family: arial;
+            font-size: 14px;
+        }
+
+        #nome{
+            width: 300px;
+        }
+
+        #container{
+            display: flex;
+            
+        }
+        #container-select{
+            width: 50%;
+        }
+        #log{
+            width: 75px;
+            height: 25px;
+        }
+        #soma{
+            width: 50px;
+        }
+        #container-radio{
+            width: 50%;
+            position: relative;
+            left: 80px;
+        }
+
+        #salvar{
+           background-color: white;
+           width: 90px;
+        }
+        #salvar:hover{
+            background-color: black;
+            color: white;
+        }        
+    </style>
+</head>
+<body>
+    <form action="/action.php" method="POST" target="_blank">
+
+        <fieldset>
+                <legend>
+                    <h3>Formulário</h3>
+                </legend>
+
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" name="nomeCompleto" id="nome" maxlength="35">
+                    <br><br>
+
+                    <label for="data">Data de Nascimento:</label>
+                    <input type="date" name="dataNasc" id="data">
+                    <br><br>
+
+            <div id="container">
+
+                <div id="container-select">
+                    <label for="log">Selecione o estado em que mora:</label>
+                    <br><br>
+                    <select name="logradouro" id="log">
+                        <option value="">Estado</option>
+                        <option value="pe">Pernambuco</option>
+                        <option value="ba">Bahia</option>
+                        <option value="sp">São Paulo</option>
+                    </select>
+                    <br><br><br><br>
+
+                    <label for="soma">5 + 4 é ?</label>
+                    <input type="number" name="exSoma" id="soma">
+                    <br><br>
+    
+                </div>
+
+                <div id="container-radio">
+                    <label>Gênero:</label>
+                    <br><br>
+                    <input type="radio" name="feminino" id="fem" value="feminino">
+                    <label for="fem">Feminino</label>
+                    <br>
+
+                    <input type="radio" name="masculino" id="masc" value="masculino">
+                    <label for="masc">Masculino</label>
+                    <br>
+
+                    <input type="radio" name="outro" id="out" value="outro">
+                    <label for="out">Outro</label>
+                    <br><br>
+
+                    <input type="submit" id="salvar" value="Salvar">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
